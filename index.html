@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Calculadora JavaScript</title>
+  <link rel='icon' type='image/png' href='icon-calc.png'>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h1>Calculadora JavaScript</h1>
+  <div class="container">
+    <div class="visor">
+      <div class="operacao" id='acumulador'></div>
+      <div class="total" id='total' hidden></div>
+    </div>
+    <div class="row">
+      <div class="row1">
+        <div class="numerico acao" onclick='LimpaTudo()'>C</div>
+        <div class="numerico acao" onclick='LimpaEntradaAtual()'>CE</div>
+        <div class="numerico acao" onclick='Percentagem()'>%</div>
+        <div class="numerico acao" onclick="AcaoCalculo('/')">/</div>
+      </div>
+      <div class="row2">
+        <div class="numerico" onclick="AddNumero(7)">7</div>
+        <div class="numerico" onclick="AddNumero(8)">8</div>
+        <div class="numerico" onclick="AddNumero(9)">9</div>
+        <div class="numerico acao" onclick="AcaoCalculo('x')">x</div>
+      </div>
+      <div class="row3">
+        <div class="numerico" onclick="AddNumero(4)">4</div>
+        <div class="numerico" onclick="AddNumero(5)">5</div>
+        <div class="numerico" onclick="AddNumero(6)">6</div>
+        <div class="numerico acao" onclick="AcaoCalculo('-')">-</div>
+      </div>
+      <div class="row4">
+        <div class="numerico" onclick="AddNumero(1)">1</div>
+        <div class="numerico" onclick="AddNumero(2)">2</div>
+        <div class="numerico" onclick="AddNumero(3)">3</div>
+        <div class="numerico acao" onclick="AcaoCalculo('+')">+</div>
+      </div>
+      <div class="row5">
+        <div class="numerico" onclick="AddPonto()">.</div>
+        <div class="numerico" onclick="AddNumero(0)">0</div>
+        <div class="numerico acao resultado" onclick='Resultado()'>=</div>
+        <div class="numerico acao" onclick='InverteSinal()'>+/-</div>
+      </div>
+    </div>  
+  </div>
+
+  <footer class="rodape">
+    <p>Calculadora desenvolvida por <a target='_blank' href="https://github.com/lilitbandeira">Lilit</a></p>
+  </footer>
+</body>
+</html>
